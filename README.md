@@ -489,10 +489,12 @@ image:
 
 - Prometheus/Grafana monitors inference latency and health.
 
-  #### You get an end-to-end automated model lifecycle — from code → build → deploy → monitor.
-  
+#### You get an end-to-end automated model lifecycle — from code → build → deploy → monitor.
 
-  ## CONCLUSION — COMPLETE ENTERPRISE GITOPS PIPELINE
+---
+  
+### CONCLUSION — COMPLETE ENTERPRISE GITOPS PIPELINE
+
 
 #### By integrating ArgoCD with Helm, your Kubernetes environment now achieves:
 
