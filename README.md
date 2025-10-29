@@ -272,8 +272,7 @@ This is implemented using **ArgoCD** — a declarative, GitOps-based continuous 
 
 ArgoCD continuously monitors your repo, detects changes, and applies them automatically.
 
----
----
+
 ---
 
 ##  WHY USE ARGOCD?
