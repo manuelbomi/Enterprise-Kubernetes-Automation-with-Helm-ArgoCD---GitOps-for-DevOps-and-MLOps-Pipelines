@@ -26,3 +26,10 @@ It lets you bundle all your YAML configurations (Deployments, Services, Ingress,
 ### 🪟 Windows
 ```bash
 choco install kubernetes-helm
+
+
+🍎 macOS
+
+```python
+brew install helm
+```
