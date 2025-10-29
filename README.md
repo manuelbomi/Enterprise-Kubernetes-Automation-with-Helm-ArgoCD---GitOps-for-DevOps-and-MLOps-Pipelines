@@ -128,3 +128,124 @@ service:
 ```python
 helm install my-nginx nginx-chart/
 ```
+
+#### Helm will render your YAML templates and deploy them to Kubernetes.
+
+#### Check resources:
+
+```python
+kubectl get all
+```
+
+#### You will see your deployment and service created — just like before, but now fully managed through Helm.
+
+
+## STEP 6 — UPDATE & ROLLBACK
+
+#### When you need to make changes (e.g., new image version):
+
+#### Edit values.yaml:
+
+```python
+image:
+  repository: nginx
+  tag: 1.27
+```
+
+#### Then upgrade:
+
+```python
+helm upgrade my-nginx nginx-chart/
+```
+
+#### Helm tracks revision history automatically. 
+
+#### If something goes wrong, rollback instantly:
+
+```python
+helm rollback my-nginx 1
+```
+
+## STEP 7 — CI/CD INTEGRATION EXAMPLE (GitHub Actions)
+
+#### Add a GitHub workflow .github/workflows/helm-deploy.yaml:
+
+```python
+name: Helm Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up kubectl
+      uses: azure/setup-kubectl@v3
+      with:
+        version: 'latest'
+
+    - name: Set up Helm
+      uses: azure/setup-helm@v3
+      with:
+        version: 'latest'
+
+    - name: Deploy Helm Chart
+      run: |
+        helm upgrade --install my-nginx ./nginx-chart --wait
+```
+
+#### This workflow automatically:
+
+- Builds and packages your Helm chart.
+
+- Deploys it on every commit to main.
+
+- Waits until all pods are healthy before finishing.
+
+---
+
+## HELM FOR MLOPS PIPELINES
+
+#### Using Helm is not limited to web apps — it is widely used for machine learning pipelines too.
+
+#### Example: Deploying an ML inference service
+
+```python
+helm create ml-inference-chart
+```
+
+#### Then modify values.yaml:
+
+```python
+image:
+  repository: yourdockerhub/ml-inference
+  tag: latest
+service:
+  type: LoadBalancer
+  port: 5000
+```
+
+#### Deploy:
+
+```python
+helm install inference ml-inference-chart/
+```
+
+#### Now, your trained model can be deployed as a versioned, scalable, reproducible Helm release — ideal for A/B testing models, rolling upgrades, or canary releases in production.
+
+### ENTERPRISE BENEFITS OF USING HELM
+
+| Area | Advantage |
+|------|-----------|
+| **DevOps Automation** | Simplifies CI/CD deployments across multiple environments. |
+| **Configuration Management** | Centralizes environment-specific settings in values.yaml. |
+| **Scalability** | Supports multiple replicas and autoscaling templates out of the box. |
+| **Disaster Recovery** | Instant rollbacks and version control for all Kubernetes resources. |
+| **MLOps Workflows** | Enables reproducible deployments for data preprocessing, model training, and inference services. |
