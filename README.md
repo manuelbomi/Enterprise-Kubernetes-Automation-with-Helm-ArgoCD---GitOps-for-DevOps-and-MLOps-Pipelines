@@ -1,4 +1,9 @@
-# Enterprise Kubernetes Automation with Helm & ArgoCD — GitOps for DevOps and MLOps Pipelines
+#  Enterprise Kubernetes GitOps Pipeline — Helm + ArgoCD for DevOps & MLOps Automation
+
+
+
+> End-to-end CI/CD and GitOps framework integrating **Helm**, **ArgoCD**, **Kubernetes**, and **GitHub Actions** for scalable, automated enterprise deployments.
+
 
 As your Kubernetes environment grows, managing many YAML files manually becomes cumbersome.  
 
