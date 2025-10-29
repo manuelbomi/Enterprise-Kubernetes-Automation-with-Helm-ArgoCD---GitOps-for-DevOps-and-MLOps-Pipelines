@@ -5,7 +5,8 @@ As your Kubernetes environment grows, managing many YAML files manually becomes 
 That is  where **Helm** comes in.
 
 Helm is often called the **“package manager for Kubernetes.”**  
-It lets you bundle all your YAML configurations (Deployments, Services, Ingress, etc.) into a single **Helm chart** that can be versioned, parameterized, and deployed consistently across environments (Dev, Staging, Production).
+
+Helm lets you bundle all your YAML configurations (Deployments, Services, Ingress, etc.) into a single **Helm chart** that can be versioned, parameterized, and deployed consistently across environments (Dev, Staging, Production).
 
 ---
 
