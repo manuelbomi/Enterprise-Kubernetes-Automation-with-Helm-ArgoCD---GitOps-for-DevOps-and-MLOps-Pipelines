@@ -255,7 +255,7 @@ helm install inference ml-inference-chart/
 
 ---
 
-## 🔁 ARGOCD GITOPS AUTOMATION — CONTINUOUS DELIVERY WITH HELM
+##  ARGOCD GITOPS AUTOMATION — CONTINUOUS DELIVERY WITH HELM
 
 After using Helm to package and manage your Kubernetes apps, the next step toward **full enterprise automation** is **GitOps** — a methodology where *Git becomes the single source of truth* for your deployments.
 
