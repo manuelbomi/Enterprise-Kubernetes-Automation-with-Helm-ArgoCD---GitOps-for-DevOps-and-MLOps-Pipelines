@@ -94,6 +94,20 @@ nginx-chart/
 │   └── _helpers.tpl
 ```
 
+> [!NOTE]
+> The example uses NGINX, but the folder structure is a reusable blueprint for enterprise Kubernetes GitOps repos.
+>
+> # How to Understand the Structure
+
+| Folder | Purpose | Example Content |
+|--------|---------|-----------------|
+| **nginx-chart/** | A Helm chart for any frontend/web app | deployment.yaml, values.yaml, service.yaml |
+| **ml-inference-chart/** | A Helm chart for any ML model or inference service | ML API deployment & service files |
+| **.github/workflows/** | CI/CD automation pipelines | GitHub Actions for build/deploy |
+| **README.md** | Documentation | Your Kubernetes + Helm + ArgoCD guide |
+
+---
+
 ## STEP 3 — EDIT THE HELM TEMPLATES
 
 #### Open templates/deployment.yaml and make sure it contains:
