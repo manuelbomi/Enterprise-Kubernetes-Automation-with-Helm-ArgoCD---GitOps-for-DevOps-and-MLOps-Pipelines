@@ -116,13 +116,45 @@ nginx-chart/
 
 ```python
 
-📦 enterprise-k8s-gitops-pipeline
+ | enterprise-k8s-gitops-pipeline
  ├── api-service-chart/
  ├── frontend-ui-chart/
  ├── model-serving-chart/
  ├── data-pipeline-chart/
  ├── .github/workflows/
  └── README.md
+
+```
+
+#### Or if you are doing MLOps:
+
+```python
+| ai-platform-k8s-gitops
+ ├── feature-store-chart/
+ ├── model-training-chart/
+ ├── model-serving-chart/
+ ├── monitoring-stack-chart/  # Prometheus/Grafana
+ ├── .github/workflows/
+ └── README.md
+
+```
+
+### <ins>Key Point</ins>
+
+- Each folder = one deployable service packaged as a Helm chart.
+
+- You can add more charts as your enterprise application grows:
+
+```python
+| Example Service          | Chart Name            |
+| ------------------------ | --------------------- |
+| API Backend              | `backend-api-chart/`  |
+| Web Frontend             | `web-ui-chart/`       |
+| Redis Cache              | `redis-chart/`        |
+| Postgres DB              | `postgres-chart/`     |
+| ML Model Inference       | `ml-inference-chart/` |
+| Kafka Broker             | `kafka-chart/`        |
+| Airflow ML Orchestration | `airflow-chart/`      |
 ```
 
 ---
