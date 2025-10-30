@@ -98,8 +98,9 @@ nginx-chart/
 
 > [!NOTE]
 > The example uses NGINX, but the folder structure is a reusable blueprint for enterprise Kubernetes GitOps repos.
->
-> # How to Understand the Structure
+
+
+# How to Understand the Structure
 
 | Folder | Purpose | Example Content |
 |--------|---------|-----------------|
@@ -110,7 +111,7 @@ nginx-chart/
 
 #### Rename these folders for your real projects
 
-#### If your services aren't NGINX or ML inference, rename like this:
+#### If your services is not NGINX or ML inference, you may rename iyt like this:
 
 #### Example enterprise naming:
 
