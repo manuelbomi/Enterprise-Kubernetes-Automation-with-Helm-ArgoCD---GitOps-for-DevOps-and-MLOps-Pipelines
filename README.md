@@ -111,7 +111,7 @@ nginx-chart/
 
 #### Rename these folders for your real projects
 
-#### If your services is not NGINX or ML inference, you may rename iyt like this:
+#### If your services is not NGINX or ML inference, you may rename iy like this:
 
 #### Example enterprise naming:
 
