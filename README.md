@@ -367,6 +367,53 @@ ArgoCD continuously monitors your repo, detects changes, and applies them automa
   
 - ArgoCD = deploys to the cluster using Git state
 
+```python
+                   ┌───────────────────────────┐
+                   │        Developers         │
+                   │  (Git pushes/PR updates)  │
+                   └─────────────┬─────────────┘
+                                 │
+                                 ▼
+                        ┌────────────────┐
+                        │     Git Repo   │
+                        │ (App Manifests │
+                        │  & Helm Charts)│
+                        └───────┬────────┘
+                                │  (Source of Truth)
+                                ▼
+                      ┌────────────────────┐
+                      │     ArgoCD        │
+                      │  GitOps Operator  │
+                      │(Pulls from Git)   │
+                      └───────┬───────────┘
+                              │ Sync
+                              ▼
+                  ┌───────────────────────────────┐
+                  │      Kubernetes Cluster       │
+                  │  ┌─────────────────────────┐  │
+                  │  │   ArgoCD Controller     │  │
+                  │  │  Applies & Syncs Apps   │  │
+                  │  └─────────────────────────┘  │
+                  │          │                    │
+                  │          │ Deploy             │
+                  │          ▼                    │
+                  │  ┌─────────────────────────┐  │
+                  │  │   Application Pods      │  │
+                  │  └─────────────────────────┘  │
+                  └───────────────────────────────┘
+
+```
+
+### Workflow Summary
+
+| Step | Action |
+|------|--------|
+| 1 | Dev pushes code or YAML to GitHub/GitLab/Repo |
+| 2 | ArgoCD continuously monitors the repo |
+| 3 | ArgoCD pulls changes automatically (Pull-based GitOps) |
+| 4 | ArgoCD syncs desired state → Kubernetes cluster |
+| 5 | Kubernetes deploys and manages the workloads |
+
 
 ---
 
