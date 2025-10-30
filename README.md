@@ -40,6 +40,8 @@ The setup follows industry best practices for **DevOps**, **MLOps**, and **GitOp
 | **Consistency** | Guarantees uniform deployment across clusters. |
 | **CI/CD Friendly** | Works seamlessly with Jenkins, GitHub Actions, or ArgoCD. |
 
+
+
 ---
 
 ##  STEP 1 — INSTALL HELM
@@ -105,6 +107,23 @@ nginx-chart/
 | **ml-inference-chart/** | A Helm chart for any ML model or inference service | ML API deployment & service files |
 | **.github/workflows/** | CI/CD automation pipelines | GitHub Actions for build/deploy |
 | **README.md** | Documentation | Your Kubernetes + Helm + ArgoCD guide |
+
+#### Rename these folders for your real projects
+
+#### If your services aren't NGINX or ML inference, rename like this:
+
+#### Example enterprise naming:
+
+```python
+
+📦 enterprise-k8s-gitops-pipeline
+ ├── api-service-chart/
+ ├── frontend-ui-chart/
+ ├── model-serving-chart/
+ ├── data-pipeline-chart/
+ ├── .github/workflows/
+ └── README.md
+```
 
 ---
 
