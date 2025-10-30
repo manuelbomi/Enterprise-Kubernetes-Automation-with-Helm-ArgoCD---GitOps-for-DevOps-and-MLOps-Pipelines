@@ -359,6 +359,14 @@ This is implemented using **ArgoCD** — a declarative, GitOps-based continuous 
 
 ArgoCD continuously monitors your repo, detects changes, and applies them automatically.
 
+#### So the pipeline is typically:
+
+**Code in GitHub → CI via GitHub Actions → ArgoCD reads repo → Deploys to Kubernetes**
+
+- GitHub = stores your code and CI
+  
+- ArgoCD = deploys to the cluster using Git state
+
 
 ---
 
