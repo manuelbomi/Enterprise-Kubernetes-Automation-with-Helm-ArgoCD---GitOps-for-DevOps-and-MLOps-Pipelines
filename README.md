@@ -106,7 +106,7 @@ nginx-chart/
 |--------|---------|-----------------|
 | **nginx-chart/** | A Helm chart for any frontend/web app | deployment.yaml, values.yaml, service.yaml |
 | **ml-inference-chart/** | A Helm chart for any ML model or inference service | ML API deployment & service files |
-| **.github/workflows/** | CI/CD automation pipelines | GitHub Actions for build/deploy |
+| **.github/workflows/** | CI/CD automation pipelines (see example below) | GitHub Actions for build/deploy |
 | **README.md** | Documentation | Your Kubernetes + Helm + ArgoCD guide |
 
 #### Rename these folders for your real projects
